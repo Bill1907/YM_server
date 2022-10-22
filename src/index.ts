@@ -1,5 +1,8 @@
 import { fastify } from 'fastify';
+import dotenv from 'dotenv';
 import pino from 'pino';
+
+dotenv.config();
 const Port = process.env.PORT || 7000;
 
 const server = fastify({
