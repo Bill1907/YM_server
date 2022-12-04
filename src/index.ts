@@ -15,8 +15,9 @@ crawling(url);
 
 const start = async () => {
   try {
-    await server.listen(Port);
-    console.log('Server started successfully');
+    server.listen(() => Port);
+    console.log(`Server started successfully`);
+    console.log(`Port is ${Port}`);
   } catch (err) {
     server.log.error(err);
     process.exit(1);

@@ -25,8 +25,9 @@ const url = `https://map.naver.com/v5/`;
 (0, crawling_1.default)(url);
 const start = () => __awaiter(void 0, void 0, void 0, function* () {
     try {
-        yield server.listen(Port);
-        console.log('Server started successfully');
+        server.listen(() => Port);
+        console.log(`Server started successfully`);
+        console.log(`Port is ${Port}`);
     }
     catch (err) {
         server.log.error(err);
